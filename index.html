@@ -59,8 +59,7 @@
 
         .form-box{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:18px 16px}
         .form-box-title{font-size:16px;font-weight:800;text-align:center;margin-bottom:10px}
-        #youcan-form,#widget{width:100%}
-        #youcan-form iframe{width:100%!important;min-height:320px}
+        #youcan-form,#widget{width:100%;max-width:100%;overflow:hidden;box-sizing:border-box}
         .form-trust{display:flex;justify-content:center;gap:14px;margin-top:10px;font-size:11px;color:rgba(255,255,255,.5)}
 
         /* ===== SECTIONS ===== */
@@ -197,7 +196,7 @@
             <div class="form-box-title">اطلب الآن</div>
             <div id="youcan-form">
                 <div id="widget">
-                <script type="application/json">{"options":{"colors":{"background":"#d4af37","text":"#0b3d2d"},"width":500},"configs":{"widgetType":2,"ctaText":"اطلب الآن","currency":"دينار ليبي","textDirection":"Rtl","showDescription":false,"isCheckoutFormEnabled":true},"assets":{"customCode":"","selectedProduct":{"id":"adfc96d5-4ecb-4959-bdd9-bea288ac8415","variantId":"fc27dc2b-698b-4cbd-ac55-3c750edbc3c3"},"storeFrontUrl":"https://dealsgcc.com","forms":[{"name":"first_name","displayName":"الاسم","required":true,"enabled":true,"custom":false,"placeholder":"الاسم"},{"name":"phone","displayName":"رقم الهاتف","required":true,"enabled":true,"custom":false,"placeholder":"رقم الهاتف"},{"name":"city","displayName":"المدينة","required":true,"enabled":true,"custom":false}]}}</script>
+                <script type="application/json">{"options":{"colors":{"background":"#d4af37","text":"#0b3d2d"},"width":440},"configs":{"widgetType":2,"ctaText":"اطلب الآن","currency":"دينار ليبي","textDirection":"Rtl","showDescription":false,"isCheckoutFormEnabled":true},"assets":{"customCode":"","selectedProduct":{"id":"adfc96d5-4ecb-4959-bdd9-bea288ac8415","variantId":"fc27dc2b-698b-4cbd-ac55-3c750edbc3c3"},"storeFrontUrl":"https://dealsgcc.com","forms":[{"name":"first_name","displayName":"الاسم","required":true,"enabled":true,"custom":false,"placeholder":"الاسم"},{"name":"phone","displayName":"رقم الهاتف","required":true,"enabled":true,"custom":false,"placeholder":"رقم الهاتف"},{"name":"city","displayName":"المدينة","required":true,"enabled":true,"custom":false}]}}</script>
                 </div>
                 <script async src="https://dealsgcc.com/apps/buynowwidget/js/bundle.js?v=116724819"></script>
             </div>
@@ -381,7 +380,7 @@ document.querySelectorAll('a[href="#checkout"]').forEach(function(el){
         if(!shadow)return;
         if(!cssInjected){
             var s=document.createElement('style');
-            s.textContent='.image-container{display:none!important}.product-title{display:none!important}.infos-container .product-price{display:none!important}:host,.forms,.checkout-form-container,.infos-container,.cta-btn,.product-container{width:100%!important;max-width:100%!important}.cta-btn{background:#d4af37!important;color:#0b3d2d!important;padding:14px!important;font-size:16px!important;border-radius:10px!important}input,select{width:100%!important;padding:12px!important;font-size:15px!important;border-radius:8px!important}input:focus{border-color:#d4af37!important}';
+            s.textContent='.image-container{display:none!important}.product-title{display:none!important}.infos-container .product-price{display:none!important}:host{width:100%!important;max-width:100%!important;box-sizing:border-box!important}.forms,.checkout-form-container,.infos-container,.cta-btn,.product-container{width:100%!important;max-width:100%!important;box-sizing:border-box!important}.cta-btn{background:#d4af37!important;color:#0b3d2d!important;padding:14px!important;font-size:16px!important;border-radius:10px!important}input,select{width:100%!important;padding:12px!important;font-size:15px!important;border-radius:8px!important;box-sizing:border-box!important}input:focus{border-color:#d4af37!important}';
             shadow.appendChild(s);
             cssInjected=true;
         }
